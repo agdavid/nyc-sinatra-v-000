@@ -1,0 +1,14 @@
+<h1>Landmarks Index Page</h1>
+<h4>Below are all the existing Landmarks:</h4>
+<p>Click a landmark to visit its homepage</p>
+<ul>
+  <% @landmarks.each do |landmark| %>
+    <li>
+      <a href="/landmarks/<%= landmark.id %>">Name: <%= landmark.name %>; Year Completed: <%= landmark.year_completed%><a/>
+    </li>
+  <% end %>
+</ul><br>
+
+<a href="/landmarks/new"><input type="submit" value="Create New Landmark"></a><br>
+
+<a href="/">Sinatra NYC Home</a>
